@@ -103,9 +103,8 @@ public class ForegroundService extends Service {
         getApplicationContext().startService(service);
 
         int delay = (int)taskConfig.getDouble("delay");
-
-          int loopDelay = (int)taskConfig.getDouble("loopDelay");
-          Log.d("SuperLog",""+loopDelay);
+        int loopDelay = (int)taskConfig.getDouble("loopDelay");
+        // Log.d("SuperLog",""+loopDelay);
         handler.postDelayed(this, loopDelay);
       }
     };
